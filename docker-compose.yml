@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  tunnel:
+    image: fly-cloudflared
+    build:
+      context: .
+    environment:
+      ACCOUNT_TAG: $ACCOUNT_TAG
+      TUNNEL_SECRET: $TUNNEL_SECRET
+      TUNNEL_ID: $TUNNEL_ID
+      TUNNEL_NAME: $TUNNEL_NAME

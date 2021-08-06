@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+set -euo pipefail
+wait-for-it -h localhost -p 80
+cloudflared --no-autoupdate --url http://localhost:80 tunnel run $TUNNEL_ID
